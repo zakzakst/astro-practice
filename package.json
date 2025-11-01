@@ -8,7 +8,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "biome format --write",
-    "lint2": "biome check --write"
+    "lint2": "biome check --write",
+    "stylelint": "stylelint **/*.css --fix"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.1",
@@ -17,6 +18,10 @@
     "react": "^19.2.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.3.2"
+    "@biomejs/biome": "2.3.2",
+    "@stylistic/stylelint-plugin": "^4.0.0",
+    "stylelint": "^16.25.0",
+    "stylelint-config-recess-order": "^7.4.0",
+    "stylelint-config-standard": "^39.0.1"
   }
 }
