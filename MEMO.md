@@ -1,5 +1,13 @@
-- https://qiita.com/adatara/items/e2d5598cd2a507c54b21
+### 調べる
+- biomeの設定方法
+  - organizeImportsをフォーマット時に反映させる
+  - cssのフォーマット設定
+    - プロパティの並び順
+    - ショートハンドの設定
 
 ### 参考
 
 - https://www.pokemon.co.jp/ex/legends_z-a/ja/
+
+### 確認済
+- https://qiita.com/adatara/items/e2d5598cd2a507c54b21
