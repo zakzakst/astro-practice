@@ -1,4 +1,8 @@
+:root {
+  --test: #f00;
+}
+
 .module {
   display: inline;
-  background-color: #f00;
+  background-color: var(--test);
 }
