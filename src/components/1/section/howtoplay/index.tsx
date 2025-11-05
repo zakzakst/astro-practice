@@ -3,5 +3,5 @@ import "./global.css";
 import styles from "./styles.module.css";
 
 export const SectionHowToPlay: React.FC = () => {
-  return <section className={styles.module}>遊び方</section>;
+  return <section className={styles.title - en}>遊び方</section>;
 };
