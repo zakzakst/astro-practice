@@ -4,5 +4,6 @@ export default {
   plugins: ["@stylistic/stylelint-plugin"],
   rules: {
     "@stylistic/indentation": 2,
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$",
   },
 };
