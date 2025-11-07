@@ -5,5 +5,6 @@
 
 .titleEn {
   position: relative;
+  color: var(--color-white);
   background-image: linear-gradient(90deg, rgb(51 193 241 / 0%) 0%, rgb(51 193 241 / 50%) 20%, rgb(51 193 241) 50%, rgb(51 193 241 / 50%) 80%, rgb(51 193 241 / 0%) 100%);
 }
