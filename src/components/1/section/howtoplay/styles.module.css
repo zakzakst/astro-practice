@@ -5,6 +5,32 @@
 
 .titleEn {
   position: relative;
+  display: block;
   color: var(--color-white);
   background-image: linear-gradient(90deg, rgb(51 193 241 / 0%) 0%, rgb(51 193 241 / 50%) 20%, rgb(51 193 241) 50%, rgb(51 193 241 / 50%) 80%, rgb(51 193 241 / 0%) 100%);
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-image: linear-gradient(0deg, #fff 0, #fff 1px, transparent 1px, transparent 3px);
+    background-repeat: repeat-y;
+    background-size: 100% 3px;
+    opacity: 0.3;
+    mask-image: linear-gradient(90deg, transparent 0%, #000 20%, #000 80%, transparent 100%);
+  }
+}
+
+.titleEnText {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 0 rgb(8 20 59 / 25%);
 }
