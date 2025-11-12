@@ -7,9 +7,9 @@ export const SectionHowToPlay: React.FC = () => {
     <section>
       <hgroup>
         <p className={styles.titleEn}>
-          <span className={styles.titleEnText}></span>
+          <span className={styles.titleEnText}>Features</span>
         </p>
-        <h2>遊び方</h2>
+        <h2 className={styles.title}>遊び方</h2>
       </hgroup>
     </section>
   );
