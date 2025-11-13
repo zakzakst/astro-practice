@@ -1,4 +1,7 @@
 .title {
+  font-size: min(63px, 11.2vw);
+  font-weight: 900;
+  line-height: 1;
   color: var(--color-white);
 }
 
