@@ -1,0 +1,24 @@
+.dragArea {
+  display: grid;
+  gap: 16px;
+  place-items: center;
+  padding: 24px;
+  border: dashed #000 1px;
+  border-radius: 24px;
+  
+  &[data-drag-active="true"] {
+    background-color: #f00;
+  }
+}
+
+.inputButton {
+  width: fit-content;
+  margin: auto;
+  color: #fff;
+  cursor: pointer;
+  background-color: #000;
+}
+
+.input {
+  display: none;
+}
