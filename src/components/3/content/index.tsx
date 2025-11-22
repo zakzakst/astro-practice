@@ -1,6 +1,23 @@
-// https://tiermaker.com/single-use-tier-list/
-import type React from "react";
+import type { FC } from "react";
+import { useState } from "react";
+import { ImageUploader } from "../parts/ImageUploader";
 
-export const Content: React.FC = () => {
-  return <div>内容</div>;
+export const Content: FC = () => {
+  const [images, setImages] = useState<string[]>([]);
+
+  // NOTE: ドラックドロップの実装慣れていないので、コンポーネント分割は後回し
+  return (
+    <>
+      <ImageUploader onAddImages={(images) => setImages(images)} />
+      {!!images.length && (
+        <ul>
+          {images.map((image) => (
+            <li key={image}>
+              <img src={image} alt="" />
+            </li>
+          ))}
+        </ul>
+      )}
+    </>
+  );
 };
