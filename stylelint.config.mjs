@@ -1,5 +1,6 @@
 /** @type {import("stylelint").Config} */
 export default {
+  ignoreFiles: ["**/reset.css"],
   extends: ["stylelint-config-standard", "stylelint-config-recess-order"],
   plugins: ["@stylistic/stylelint-plugin"],
   rules: {
