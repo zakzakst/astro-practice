@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import { useState } from "react";
+import "./reset.css";
 import { ImageUploader } from "../parts/ImageUploader";
 
 export const Content: FC = () => {

@@ -2,6 +2,13 @@ import type { ChangeEvent, DragEvent, FC } from "react";
 import { useState } from "react";
 import styles from "./styles.module.css";
 
+const getImageFileUrls = (files: FileList): string[] => {
+  const result = Array.from(files)
+    .filter((f) => f.type.startsWith("image/"))
+    .map((file) => URL.createObjectURL(file));
+  return result;
+};
+
 type ImageUploaderProps = {
   onAddImages: (images: string[]) => void;
 };
@@ -16,6 +23,8 @@ export const ImageUploader: FC<ImageUploaderProps> = ({ onAddImages }) => {
 
   const handleDragEnter = (e: DragEvent) => {
     e.preventDefault();
+    // TODO: 画像以外がドラッグされている場合に色が変わらないようにする
+    // ⇒ 調べてみたが、実装が難しそうなので、ドロップ時に「対応するデータでない」メッセージを出すことで対応
     setIsDragActive(true);
   };
 
@@ -26,18 +35,20 @@ export const ImageUploader: FC<ImageUploaderProps> = ({ onAddImages }) => {
   const handleDrop = (e: DragEvent) => {
     e.preventDefault();
     setIsDragActive(false);
-    const files = e.dataTransfer?.files;
-    if (!files?.length) return;
-    const images = Array.from(files)
-      .filter((f) => f.type.startsWith("image/"))
-      .map((file) => URL.createObjectURL(file));
+    const files = e.dataTransfer.files;
+    const images = getImageFileUrls(files);
+    if (!images.length) {
+      alert("画像をドラッグアンドドロップしてください");
+      return;
+    }
     onAddImages(images);
   };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
-    if (!files?.length) return;
-    const images = Array.from(files).map((file) => URL.createObjectURL(file));
+    if (!files) return;
+    const images = getImageFileUrls(files);
+    if (!images.length) return;
     onAddImages(images);
     // 処理後に input に保持されているファイルをクリア
     e.currentTarget.value = "";
