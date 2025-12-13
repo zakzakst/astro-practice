@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import clsx from 'clsx';
+// https://github.com/joe-bell/cva/blob/main/examples/latest/vue/src/components/Button.vue
 type DividerColor = 'gray-420' | 'gray-536' | 'black';
 
 type Props = {
@@ -12,12 +12,14 @@ const { color = 'gray-420', className } = defineProps<Props>();
 
 <template>
   <hr
-    :class="clsx(
-      color === 'gray-420' && 'border-solid-gray-420',
-      color === 'gray-536' && 'border-solid-gray-536',
-      color === 'black' && 'border-solid-black',
-      className,
-    )"
+    :class="[
+      {
+        'border-solid-gray-420': color === 'gray-420',
+        'border-solid-gray-536': color === 'gray-536',
+        'border-solid-black': color === 'black',
+      },
+      className
+    ]"
     :data-color="color"
   />
 </template>
