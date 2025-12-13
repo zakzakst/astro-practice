@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// https://github.com/joe-bell/cva/blob/main/examples/latest/vue/src/components/Button.vue
 type DividerColor = 'gray-420' | 'gray-536' | 'black';
 
 type Props = {
