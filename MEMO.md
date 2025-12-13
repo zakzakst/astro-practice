@@ -1,4 +1,12 @@
 ### 調べる
+- https://vuejs.org/guide/built-ins/teleport.html
+- https://vuejs.org/guide/components/provide-inject.html
+- https://vuejs.org/guide/built-ins/transition.html
+- https://vuejs.org/guide/reusability/custom-directives.html
+- https://vuejs.org/guide/components/async.html
+- https://vuejs.org/guide/built-ins/transition-group.html
+- https://vuejs.org/guide/scaling-up/state-management.html
+- https://vuejs.org/guide/essentials/forms.html
 
 ### 済
 - biomeの設定方法
