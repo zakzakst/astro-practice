@@ -1,5 +1,6 @@
 ## 参考
 - https://tiermaker.com/single-use-tier-list/
+- https://zenn.dev/castingone_dev/articles/dndkit20231031
 
 ## 追加アイデア
 - 画像登録のドラッグアンドドロップ

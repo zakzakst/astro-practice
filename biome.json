@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["**", "!**/*.astro", "!**/*.css"]
+    "includes": ["**", "!**/*.astro", "!**/*.css", "!**/*.vue"]
   },
   "formatter": {
     "enabled": true,
