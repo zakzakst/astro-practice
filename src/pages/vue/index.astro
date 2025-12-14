@@ -2,6 +2,8 @@
 // https://github.com/digital-go-jp/design-system-example-components-react/tree/main/src/components
 import Button from "../../components/vue/Button.vue";
 import Divider from "../../components/vue/Divider.vue";
+import SfcBasic from "../../components/vue/SfcBasic.vue";
+import SfcReactive from "../../components/vue/SfcReactive.vue";
 import Layout from "../../layouts/Layout.astro";
 ---
 
@@ -9,5 +11,7 @@ import Layout from "../../layouts/Layout.astro";
   <div class="p-4">
     <Button size="lg" className="bg-amber-500" client:load>button</Button>
     <Divider color="gray-536" className="border-4" client:load />
+    <SfcBasic client:load />
+    <SfcReactive client:load />
   </div>
 </Layout>
